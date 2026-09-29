@@ -1,53 +1,77 @@
-🐺 CyberWolf Password Lab
+<div align="center">
 
-CyberWolf Password Lab is a professional, client-side cybersecurity toolkit built with HTML, CSS, and JavaScript for generating, analyzing, and managing strong passwords securely.
+# 🐺 CyberWolf Password Lab
 
-The project uses the browser's Web Crypto API for cryptographically secure password generation and processes passwords locally without requiring a backend or database.
+### Generate • Analyze • Protect
 
-🚀 Features
-🔐 Secure Password Generator — Generate strong passwords using uppercase, lowercase, numbers, and symbols.
-💪 Password Strength Analyzer — Analyze password length, character sets, entropy, repetition, and common patterns.
-📝 Passphrase Generator — Create memorable multi-word passphrases with optional numbers and symbols.
-📦 Bulk Password Generator — Generate multiple unique passwords and export them as TXT or CSV.
-🛡️ Password Policy Builder — Create customizable organizational password policies.
-📋 Clipboard Support — Quickly copy generated passwords and policies.
-🔒 Client-Side Processing — Passwords are generated and analyzed directly in the browser.
-⚡ Web Crypto API — Uses cryptographically secure randomness instead of Math.random().
-📱 Responsive UI — Designed for desktop, tablet, and mobile devices.
-🌑 CyberWolf Dark UI — Cybersecurity-focused visual design.
-🛠️ Tech Stack
-HTML5
-CSS3
-JavaScript
-Web Crypto API
-Browser Clipboard API
-File/Blob API
-🔐 Security Philosophy
+A professional client-side password security toolkit built with  
+**HTML5 • CSS3 • JavaScript • Web Crypto API**
 
-CyberWolf Password Lab is designed around a simple principle:
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Web%20Crypto%20API-Secure-28A745?style=for-the-badge">
+</p>
 
-Your password should stay on your device.
+<p>
+  <a href="#-features">Features</a> •
+  <a href="#-technology-stack">Tech Stack</a> •
+  <a href="#-installation">Installation</a> •
+  <a href="#-security">Security</a> •
+  <a href="#-usage">Usage</a>
+</p>
 
-The application does not require a backend or database for its core functionality. Password generation and analysis happen locally in the user's browser.
+</div>
 
-📂 Project Structure
-CyberWolf-Password-Lab/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-🎯 Use Cases
-Cybersecurity education
-Password security awareness
-Developer testing
-Authorized security labs
-Account provisioning
-Password policy demonstrations
-Cybersecurity workshops and training
-⚠️ Disclaimer
+---
 
-This project is intended for educational, defensive, and authorized security purposes. Generated credentials should never be committed to source control, shared publicly, or used for unauthorized access.
+## 📌 About
 
-👨‍💻 Built With
+**CyberWolf Password Lab** is a browser-based cybersecurity utility designed to help users generate, analyze, and work with strong passwords.
 
-CyberWolf — Learn • Secure • Build
+The application performs its core password operations **locally in the browser**, without requiring a backend server or database.
+
+Password generation uses the browser's **Web Crypto API** instead of `Math.random()`.
+
+---
+
+## 🚀 Features
+
+| Feature | Description |
+|:---|:---|
+| 🔐 **Password Generator** | Generate cryptographically secure passwords |
+| 🧪 **Password Analyzer** | Analyze password strength, entropy, and patterns |
+| 📝 **Passphrase Generator** | Create memorable multi-word passphrases |
+| 📦 **Bulk Generator** | Generate multiple unique passwords |
+| 📥 **TXT / CSV Export** | Export generated passwords locally |
+| 🛡️ **Password Policy Builder** | Create customizable password policies |
+| 📋 **Clipboard Support** | Copy generated passwords and policies |
+| 📊 **Strength Meter** | Visual password strength indicator |
+| 📱 **Responsive UI** | Works across desktop, tablet, and mobile |
+| 🔒 **Client-Side Processing** | Passwords are processed locally |
+
+---
+
+# 🔐 Password Generator
+
+Generate strong passwords using customizable security options.
+
+### Available Options
+
+- Uppercase letters
+- Lowercase letters
+- Numbers
+- Symbols
+- Custom password length
+- Exclude ambiguous characters
+- Prevent repeated characters
+- Secure random generation
+- Password strength indicator
+- Entropy estimation
+- Copy to clipboard
+
+### Example
+
+```text
+G#7v!qR9@Lm2$xP8&kZ4
