@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CyberWolf Password Lab - client-side password security toolkit">
+  <title>CyberWolf Password Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="topbar">
+    <div class="brand"><span class="wolf">🐺</span><div><strong>CYBERWOLF</strong><small>PASSWORD LAB</small></div></div>
+    <div class="privacy"><span class="dot"></span> Client-side • No password storage</div>
+  </header>
+
+  <main class="app">
+    <aside class="sidebar">
+      <button class="nav active" data-section="generator">🔐 <span>Generator</span></button>
+      <button class="nav" data-section="analyzer">🧪 <span>Analyzer</span></button>
+      <button class="nav" data-section="passphrase">📝 <span>Passphrase</span></button>
+      <button class="nav" data-section="bulk">📦 <span>Bulk Generator</span></button>
+      <button class="nav" data-section="policy">🛡️ <span>Password Policy</span></button>
+      <div class="side-note">Generate locally using the Web Crypto API.</div>
+    </aside>
+
+    <section class="content">
+      <section id="generator" class="page active">
+        <div class="hero">
+          <div><p class="eyebrow">SECURITY TOOLKIT</p><h1>Password Generator</h1><p>Generate strong passwords locally with cryptographically secure randomness.</p></div>
+          <span class="badge">SECURE RNG</span>
+        </div>
+        <div class="card">
+          <label>Password</label>
+          <div class="password-box"><input id="passwordOutput" readonly value="Click Generate"><button id="copyBtn" title="Copy">📋</button></div>
+          <div class="meter"><span id="strengthBar"></span></div>
+          <div class="strength-row"><span id="strengthText">—</span><span id="entropyText">Entropy: —</span></div>
+
+          <div class="controls">
+            <div class="field full"><label for="length">Length <b id="lengthValue">20</b></label><input id="length" type="range" min="4" max="128" value="20"></div>
+            <label class="check"><input id="upper" type="checkbox" checked><span>Uppercase A-Z</span></label>
+            <label class="check"><input id="lower" type="checkbox" checked><span>Lowercase a-z</span></label>
+            <label class="check"><input id="numbers" type="checkbox" checked><span>Numbers 0-9</span></label>
+            <label class="check"><input id="symbols" type="checkbox" checked><span>Symbols</span></label>
+            <label class="check"><input id="ambiguous" type="checkbox"><span>Exclude ambiguous</span></label>
+            <label class="check"><input id="noRepeat" type="checkbox"><span>No repeated characters</span></label>
+          </div>
+          <div class="actions"><button class="primary" id="generateBtn">⚡ Generate Password</button><button class="secondary" id="regenerateBtn">↻ Regenerate</button></div>
+          <div id="generatorMessage" class="message"></div>
+        </div>
+      </section>
+
+      <section id="analyzer" class="page">
+        <div class="hero"><div><p class="eyebrow">LOCAL ANALYSIS</p><h1>Password Analyzer</h1><p>Analyze a password without sending it to a server.</p></div></div>
+        <div class="card">
+          <label>Password to analyze</label>
+          <div class="password-box"><input id="analyzeInput" type="password" placeholder="Enter a password"><button id="toggleAnalyze">👁</button></div>
+          <div class="meter"><span id="analyzeBar"></span></div>
+          <div class="strength-row"><span id="analyzeStrength">—</span><span id="analyzeEntropy">Entropy: —</span></div>
+          <div class="stats">
+            <div><small>Length</small><strong id="aLength">0</strong></div><div><small>Character set</small><strong id="aCharset">0</strong></div>
+            <div><small>Uppercase</small><strong id="aUpper">—</strong></div><div><small>Lowercase</small><strong id="aLower">—</strong></div>
+            <div><small>Numbers</small><strong id="aNumbers">—</strong></div><div><small>Symbols</small><strong id="aSymbols">—</strong></div>
+          </div>
+          <div id="analysisList" class="analysis-list"></div>
+        </div>
+      </section>
+
+      <section id="passphrase" class="page">
+        <div class="hero"><div><p class="eyebrow">MEMORABLE SECURITY</p><h1>Passphrase Generator</h1><p>Create memorable multi-word passphrases.</p></div></div>
+        <div class="card">
+          <label>Passphrase</label>
+          <div class="password-box"><input id="phraseOutput" readonly><button id="copyPhrase">📋</button></div>
+          <div class="controls">
+            <div class="field full"><label for="wordCount">Words <b id="wordCountValue">5</b></label><input id="wordCount" type="range" min="3" max="10" value="5"></div>
+            <label class="check"><input id="phraseNumbers" type="checkbox" checked><span>Add number</span></label>
+            <label class="check"><input id="phraseSymbols" type="checkbox" checked><span>Add symbol</span></label>
+            <label class="check"><input id="capitalize" type="checkbox" checked><span>Capitalize words</span></label>
+          </div>
+          <div class="actions"><button class="primary" id="phraseBtn">⚡ Generate Passphrase</button></div>
+          <div id="phraseMessage" class="message"></div>
+        </div>
+      </section>
+
+      <section id="bulk" class="page">
+        <div class="hero"><div><p class="eyebrow">BATCH CREATION</p><h1>Bulk Generator</h1><p>Create multiple unique passwords for authorized testing and account provisioning.</p></div></div>
+        <div class="card">
+          <div class="controls">
+            <div class="field"><label>Quantity</label><input id="bulkCount" type="number" min="1" max="500" value="20"></div>
+            <div class="field"><label>Length</label><input id="bulkLength" type="number" min="4" max="128" value="20"></div>
+          </div>
+          <div class="actions"><button class="primary" id="bulkBtn">⚡ Generate Batch</button><button class="secondary" id="downloadTxt">⬇ TXT</button><button class="secondary" id="downloadCsv">⬇ CSV</button></div>
+          <textarea id="bulkOutput" readonly placeholder="Generated passwords will appear here..."></textarea>
+          <div id="bulkMessage" class="message"></div>
+        </div>
+      </section>
+
+      <section id="policy" class="page">
+        <div class="hero"><div><p class="eyebrow">ORGANIZATION SECURITY</p><h1>Password Policy Builder</h1><p>Create a practical password policy from selected controls.</p></div></div>
+        <div class="card">
+          <div class="controls">
+            <div class="field"><label>Minimum length</label><input id="policyLength" type="number" min="8" max="128" value="14"></div>
+            <div class="field"><label>Password history</label><input id="history" type="number" min="0" max="50" value="5"></div>
+            <div class="field"><label>Expiry (days)</label><input id="expiry" type="number" min="0" max="3650" value="90"></div>
+            <label class="check"><input id="pUpper" type="checkbox" checked><span>Require uppercase</span></label>
+            <label class="check"><input id="pLower" type="checkbox" checked><span>Require lowercase</span></label>
+            <label class="check"><input id="pNumber" type="checkbox" checked><span>Require numbers</span></label>
+            <label class="check"><input id="pSymbol" type="checkbox" checked><span>Require symbols</span></label>
+            <label class="check"><input id="pMfa" type="checkbox" checked><span>Require MFA</span></label>
+          </div>
+          <div class="policy-output" id="policyOutput"></div>
+          <button class="secondary" id="copyPolicy">📋 Copy Policy</button>
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer>CyberWolf Password Lab • Educational security utility • Keep passwords out of chat, logs, screenshots, and source code.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
