@@ -1,1 +1,53 @@
-🐺 CyberWolf Password Lab  CyberWolf Password Lab is a professional, client-side cybersecurity toolkit built with HTML, CSS, and JavaScript for generating, analyzing, and managing strong passwords securely.  The project uses the browser's Web Crypto API for cryptographically secure password generation and processes passwords locally without requiring a backend or database.  🚀 Features 🔐 Secure Password Generator — Generate strong passwords using uppercase, lowercase, numbers, and symbols. 💪 Password Strength Analyzer — Analyze password length, character sets, entropy, repetition, and common patterns. 📝 Passphrase Generator — Create memorable multi-word passphrases with optional numbers and symbols. 📦 Bulk Password Generator — Generate multiple unique passwords and export them as TXT or CSV. 🛡️ Password Policy Builder — Create customizable organizational password policies. 📋 Clipboard Support — Quickly copy generated passwords and policies. 🔒 Client-Side Processing — Passwords are generated and analyzed directly in the browser. ⚡ Web Crypto API — Uses cryptographically secure randomness instead of Math.random(). 📱 Responsive UI — Designed for desktop, tablet, and mobile devices. 🌑 CyberWolf Dark UI — Cybersecurity-focused visual design. 🛠️ Tech Stack HTML5 CSS3 JavaScript Web Crypto API Browser Clipboard API File/Blob API 🔐 Security Philosophy  CyberWolf Password Lab is designed around a simple principle:  Your password should stay on your device.  The application does not require a backend or database for its core functionality. Password generation and analysis happen locally in the user's browser.  📂 Project Structure CyberWolf-Password-Lab/ ├── index.html ├── style.css ├── script.js └── README.md 🎯 Use Cases Cybersecurity education Password security awareness Developer testing Authorized security labs Account provisioning Password policy demonstrations Cybersecurity workshops and training ⚠️ Disclaimer  This project is intended for educational, defensive, and authorized security purposes. Generated credentials should never be committed to source control, shared publicly, or used for unauthorized access.  👨‍💻 Built With  CyberWolf — Learn • Secure • Build
+🐺 CyberWolf Password Lab
+
+CyberWolf Password Lab is a professional, client-side cybersecurity toolkit built with HTML, CSS, and JavaScript for generating, analyzing, and managing strong passwords securely.
+
+The project uses the browser's Web Crypto API for cryptographically secure password generation and processes passwords locally without requiring a backend or database.
+
+🚀 Features
+🔐 Secure Password Generator — Generate strong passwords using uppercase, lowercase, numbers, and symbols.
+💪 Password Strength Analyzer — Analyze password length, character sets, entropy, repetition, and common patterns.
+📝 Passphrase Generator — Create memorable multi-word passphrases with optional numbers and symbols.
+📦 Bulk Password Generator — Generate multiple unique passwords and export them as TXT or CSV.
+🛡️ Password Policy Builder — Create customizable organizational password policies.
+📋 Clipboard Support — Quickly copy generated passwords and policies.
+🔒 Client-Side Processing — Passwords are generated and analyzed directly in the browser.
+⚡ Web Crypto API — Uses cryptographically secure randomness instead of Math.random().
+📱 Responsive UI — Designed for desktop, tablet, and mobile devices.
+🌑 CyberWolf Dark UI — Cybersecurity-focused visual design.
+🛠️ Tech Stack
+HTML5
+CSS3
+JavaScript
+Web Crypto API
+Browser Clipboard API
+File/Blob API
+🔐 Security Philosophy
+
+CyberWolf Password Lab is designed around a simple principle:
+
+Your password should stay on your device.
+
+The application does not require a backend or database for its core functionality. Password generation and analysis happen locally in the user's browser.
+
+📂 Project Structure
+CyberWolf-Password-Lab/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+🎯 Use Cases
+Cybersecurity education
+Password security awareness
+Developer testing
+Authorized security labs
+Account provisioning
+Password policy demonstrations
+Cybersecurity workshops and training
+⚠️ Disclaimer
+
+This project is intended for educational, defensive, and authorized security purposes. Generated credentials should never be committed to source control, shared publicly, or used for unauthorized access.
+
+👨‍💻 Built With
+
+CyberWolf — Learn • Secure • Build
